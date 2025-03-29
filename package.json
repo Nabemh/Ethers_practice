@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ethers": "^5.5.4"
+    "dotenv": "^16.4.7",
+    "ether": "^0.0.9",
+    "ethers": "^5.8.0"
   }
 }
