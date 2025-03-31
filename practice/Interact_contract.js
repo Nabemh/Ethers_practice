@@ -14,7 +14,14 @@ const address = '0x6B175474E89094C44Da98b954EedeAC495271d0F';
 const contract = new ethers.Contract(address, ERC20_ABI, provider)
 
 const main = async () => {
-
+    const name = await contract.name();
+    const symbol = await contract.symbol()
+    const totalSupply = await contract.totalSupply
+   
+    console.log(`\nReading from ${address}\n`)
+    console.log(`Name: ${name}`)
+    console.log(`Symbol: ${symbol}`)
+    console.log(`Total Supply: ${totalSupply}\n`)
 
 }
 
