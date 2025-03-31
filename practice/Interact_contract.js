@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const { ethers } = require("ethers");
 
 const key = process.env.INFURA_ID;
@@ -15,8 +17,8 @@ const contract = new ethers.Contract(address, ERC20_ABI, provider)
 
 const main = async () => {
     const name = await contract.name();
-    const symbol = await contract.symbol()
-    const totalSupply = await contract.totalSupply
+    const symbol = await contract.symbol();
+    const totalSupply = await contract.totalSupply();
    
     console.log(`\nReading from ${address}\n`)
     console.log(`Name: ${name}`)
