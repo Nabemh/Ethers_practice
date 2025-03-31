@@ -13,16 +13,16 @@ const wallet = new ethers.Wallet(privatekey1, provider);
 
 const main = async () => {
 
-    const senderBalaneceBefore = await provider.getBalance(account1)
-    const recieverBalaneceBefore = await provider.getBalance(account2)
+    const senderBalanceBefore = await provider.getBalance(account1)
+    const recieverBalanceBefore = await provider.getBalance(account2)
 
-    console.log(`reciever balance before: ${ethers.utils.formatEther(senderBalaneceBefore)}`)
-    console.log(`reciever balance before: ${ethers.utils.formatEther(recieverBalaneceBefore)}\n`)
+    console.log(`reciever balance before: ${ethers.utils.formatEther(senderBalanceBefore)}`)
+    console.log(`reciever balance before: ${ethers.utils.formatEther(recieverBalanceBefore)}\n`)
 
     //sending ether
     const tx = await wallet.sendTransaction({ 
         to: account2, 
-        value: ethers.utils.parseEther(0.025)
+        value: ethers.utils.parseEther("0.025")
     })
 
     await tx.wait() // wait for transaction to be mined
