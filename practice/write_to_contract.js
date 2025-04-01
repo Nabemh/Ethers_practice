@@ -16,7 +16,7 @@ const ERC20_ABI = [
     "function transfer(address to, uint amount) returns (bool)",
 ];
 
-const address = '0xa36085F69e2889c224210F603D836748e7dC0088'
+const address = ''
 const contract = new ethers.Contract(address, ERC20_ABI, provider)
 
 const main = async () => {
