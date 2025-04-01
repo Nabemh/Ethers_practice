@@ -5,8 +5,8 @@ const { ethers } = require("ethers");
 const INFURA_ID = process.env.INFURA_ID;
 const provider = new ethers.providers.JsonRpcProvider(`https://kovan.infura.io/v3/${INFURA_ID}`)
 
-const account1 = '0xa99831Ca21ef7C3F2E0617B6941a2b002bf5BAF6'
-const account2 = '0xa19cB97872EB70ec355F4ea6649AD9ec3f2e1ecd'
+const account1 = process.env.ACCOUNT_1
+const account2 = process.env.ACCOUNT_2
 
 const privateKey1 = process.env.PRIVATE_KEY;
 const wallet = new ethers.Wallet(privateKey1, provider)
